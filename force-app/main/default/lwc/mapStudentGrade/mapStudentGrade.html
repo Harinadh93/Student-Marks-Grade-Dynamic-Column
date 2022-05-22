@@ -1,0 +1,28 @@
+<template>
+    <div class="slds-box slds-theme_default">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+            <thead>
+                <tr>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Student Name">Name</div>
+                      </th>
+                      <th class="" scope="col">
+                        <div class="slds-truncate" title="Marks">Marks</div>
+                      </th>
+                      <th class="" scope="col">
+                        <div class="slds-truncate" title="Grade">Grade</div> <!--Dynamic column-->
+                      </th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={candilistcan} for:item="candi">
+                    <tr key={candi.Id}>
+                        <td>{candi.Name}</td>
+                        <td>{candi.Marks__c}</td>
+                        <td>{candi.Grade}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div>
+</template>
